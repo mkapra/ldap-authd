@@ -9,7 +9,7 @@ anyhow = "1.0.71"
 base64 = "0.21.2"
 clap = { version = "4.3.8", features = ["derive"] }
 lazy_static = "1.4.0"
-ldap3 = "0.11.1"
+ldap3 = "0.11.3"
 regex = "1.8.1"
 tide = "0.16.0"
 tokio = { version = "1.28.2", features = ["macros", "rt-multi-thread"] }
