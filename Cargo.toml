@@ -11,6 +11,6 @@ clap = { version = "4.3.8", features = ["derive"] }
 lazy_static = "1.4.0"
 ldap3 = "0.11.1"
 regex = "1.8.1"
-tide = "0.14.0"
+tide = "0.16.0"
 tokio = { version = "1.28.2", features = ["macros", "rt-multi-thread"] }
 log = "0.4.17"
