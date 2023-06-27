@@ -1,4 +1,4 @@
-FROM rust:1.67 AS builder
+FROM rust:1.70-bookworm AS builder
 
 WORKDIR /app
 
@@ -7,13 +7,13 @@ COPY src/ ./src/
 
 RUN cargo build --release
 
-FROM debian:buster-slim
+FROM debian:bookworm-slim
 WORKDIR /app
 COPY --from=builder /app/target/release/ldap-authd .
 
-RUN apt-get update && \
-    apt-get install -y libssl1.1 && \
-    rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y \
+  libssl3 \
+  && rm -rf /var/lib/apt/lists/*
 
-ENTRYPOINT ["./ldap-authd"]
+CMD ["./ldap-authd", "--hostname", "0.0.0.0"]
 
