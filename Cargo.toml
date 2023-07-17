@@ -5,7 +5,7 @@ edition = "2021"
 authors = ["Maximilian Kapra <maximilian@kapra.de>"]
 
 [dependencies]
-anyhow = "1.0.71"
+anyhow = "1.0.72"
 base64 = "0.21.2"
 clap = { version = "4.3.10", features = ["derive"] }
 lazy_static = "1.4.0"
